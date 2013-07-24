@@ -7,7 +7,7 @@ require 'mock_redis/string_methods'
 require 'mock_redis/zset_methods'
 require 'mock_redis/sort_method'
 require 'mock_redis/indifferent_hash'
-require 'mock_redis/info_method'
+require 'mock_redis/info_methods'
 
 class MockRedis
   class Database
@@ -17,7 +17,7 @@ class MockRedis
     include StringMethods
     include ZsetMethods
     include SortMethod
-    include InfoMethod
+    include InfoMethods
 
     attr_reader :data, :expire_times
 

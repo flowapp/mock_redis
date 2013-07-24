@@ -1,5 +1,5 @@
 class MockRedis
-  module InfoMethod
+  module InfoMethods
     SERVER_INFO = {
       "arch_bits" => "64",
       "gcc_version" => "4.2.1",
@@ -153,6 +153,10 @@ class MockRedis
         when :keyspace ;     KEYSPACE_INFO
         when :commandstats ; COMMAND_STATS_SOLO_INFO
       end
+    end
+
+    def time
+      [@base.now.to_i, 0]
     end
   end
 end
